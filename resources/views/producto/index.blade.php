@@ -15,16 +15,23 @@
 
         <div class="card articulo">
             <div class="card-body">
-            <div class="row">
+                <div class="row">
                     <div class="col-md-4">
-                <a class="btn btn-success mb-1" href="{{ url('producto/create') }}">Nuevo Producto <i class="fa fa-cart-plus" style="font-size:24px"></i></a>
-                <div class="col-md-8"><h1>Productos</h1></div>
-            </div></div>
+                        <a class="btn btn-success mb-1" href="{{ url('producto/create') }}">Nuevo Producto <i
+                                class="fa fa-cart-plus" style="font-size:24px"></i></a>
+
+                    </div>
+                    <div class="col-md-8">
+                        <h1>Productos</h1>
+                    </div>
+                </div>
                 <hr>
                 <form action="{{ route('producto.index') }}" method="get">
                     <div class="input-group mb-3">
-                        <input type="text" name="productos" class="form-control" id="buscar" value="{{ $productos }}" placeholder="Buscar producto por nombre o tipo">
-                        <button class="btn btn-outline-primary" type="submit" id="b"><i class="fa fa-search-plus" style="font-size:24px"></i></button>
+                        <input type="text" name="productos" class="form-control" id="buscar"
+                            value="{{ $productos }}" placeholder="Buscar producto por nombre o tipo">
+                        <button class="btn btn-outline-primary" type="submit" id="b"><i class="fa fa-search-plus"
+                                style="font-size:24px"></i></button>
                     </div>
                 </form>
                 <table class="table table-light table-responsive table-bordered articulo">
@@ -68,7 +75,7 @@
                                 </td>
                                 <td>
                                     <a class="btn btn-warning" href="{{ url('/producto/' . $prod->id . '/edit') }}">
-                                    Editar <i class="fa fa-edit" style="font-size:24px"></i>
+                                        Editar <i class="fa fa-edit" style="font-size:24px"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -77,7 +84,8 @@
 
                 </table>
                 {{ $datos->links() }}
-                <a class="btn btn-primary mb-1" href="{{ url('downloadP-pdf') }}">Reporte <i class="fa fa-file-pdf-o" style="font-size:24px"></i></a>
+                <a class="btn btn-primary mb-1" href="{{ url('downloadP-pdf') }}">Reporte <i class="fa fa-file-pdf-o"
+                        style="font-size:24px"></i></a>
             </div>
 
         </div>

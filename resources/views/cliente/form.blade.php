@@ -8,18 +8,19 @@
             {{ Session::get('mensaje') }}
         @endif
         @if (count($errors) > 0)
-            <div class="alert alert-danger" role="alert">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+        <div class="alert alert-danger" role="alert">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+
         @endif
 
-        <div class="card">
+        <div class="card border border-dark">
             <div class="card-body">
-                <h3>{{ $modo }} Cliente</h3>
+                <h3 >{{ $modo }} Cliente</h3>
                 <hr>
                 <div class="form-group">
                     <label for="Nombre">Nombre</label>
@@ -59,3 +60,11 @@
         </div>
     </div>
 @endsection
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+<script type="text/javascript">
+    $("#contacto, #contacto").mask("0000-0000");
+    $("#dui, #dui").mask("00000000-0");
+</script>

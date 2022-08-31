@@ -11,11 +11,11 @@
             </div>
         @endif
 
-        <div class="card">
+        <div class="card border border-dark">
             <div class="card-body">
                 <h2>Historial de consultas</h2>
                 <hr>
-                <table class="table table-light table-bordered">
+                <table class="table table-light table-bordered border border-secondary">
                     <thead class="thead-light">
                         <tr>
                             <th>Ultima Cita</th>
@@ -45,7 +45,7 @@
                     <a class="btn btn-primary" href="{{ url('mascota/' . $x->id_cliente) }}"><i class="fa fa-angle-double-left" style="font-size:24px"></i> Regresar</a>
                 @endforeach
                 <a class="btn btn-info" href="{{ url('/reporteM/' . $id) }}">
-                Reporte <i class="fa fa-file-pdf-o" style="font-size:24px"></i>                    
+                Reporte <i class="fa fa-file-pdf-o" style="font-size:24px"></i>
                 </a>
             </div>
         </div>

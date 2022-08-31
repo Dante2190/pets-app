@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card border border-dark">
                 <div class="card-body">
                     <div class="card-header">
                         @if(Auth::user()->id==1)
@@ -50,4 +50,9 @@
         </div>
     </div>
 </div>
+
+<br>
+
+@include('includes.notify')
 @endsection
+

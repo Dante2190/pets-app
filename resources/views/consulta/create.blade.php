@@ -16,7 +16,7 @@
                 </ul>
             </div>
         @endif
-            <div class="card">
+            <div class="card border border-dark">
                 <div class="card-body">
                     <h3>Nueva Consulta</h3>
                     <hr>

@@ -19,9 +19,9 @@
                     <div class="col-md-4"><a class="btn btn-success mb-1" href="{{ url('sucursal/create') }}">Nueva Sucursal <i class="fa fa-hospital-o" style="font-size:24px"></i></a></div>
                     <div class="col-md-8"><h1>Sucursales</h1></div>
                 </div>
-                
+
                 <hr>
-                <table class="table table-light table-responsive table-bordered table-bordered">
+                <table class="table table-light table-responsive table-bordered table-bordered ">
                     <thead class="thead-light">
                         <tr>
                             <th>Nombre</th>
@@ -38,7 +38,7 @@
                                     <td>{{ $suc->direccion }}</td>
                                     <td>{{ $suc->telefono }}</td>
                                     <td>
-                                        <a class="btn btn-warning" href="{{ url('/sucursal/' . $suc->id . '/edit') }}">Editar 
+                                        <a class="btn btn-warning" href="{{ url('/sucursal/' . $suc->id . '/edit') }}">Editar
                                         <i class="fa fa-edit" style="font-size:24px"></i>
                                         </a>
                                     </td>

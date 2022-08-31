@@ -29,8 +29,8 @@ class ContactMail extends Mailable
     public function build()
     {
         return $this->view('email.info')
-                    ->subject('Nuevo mensaje')
-                    ->from('system@yoursite.com', 'System')
+                    ->subject('Recordatorio')
+                    ->from('corralpets22@gmail.com', 'Verterinaria El Corral')
                     ->with('data', $this->data);
     }
 }

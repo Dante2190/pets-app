@@ -12,19 +12,10 @@
         @endif
         <div class="card">
             <div class="card-body">
-                <button type="button" class="btn btn-info mb-1" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-whatever="@getbootstrap">Recordatorio <i class="fa fa-send-o"
-                        style="font-size:24px"></i></button>
-                @include('email.email')
-                <hr>
-                <form action="" method="get">
-                    <div class="input-group mb-3">
-                        <input type="text" name="animales" class="form-control" id="buscar"
-                            value="{{ $animales }}" placeholder="Ingrese el nombre de la mascota">
-                        <button class="btn btn-outline-primary" type="submit" id="b"><i class="fa fa-search-plus"
-                                style="font-size:24px"></i></button>
-                    </div>
-                </form>
+            <button type="button" class="btn btn-info mb-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Recordatorio <i class="fa fa-send-o" style="font-size:24px"></i></button>
+                                    @include('email.email')
+                                    <hr>
+
                 <table class="table table-light table-bordered">
                     <thead class="thead-light">
                         <tr>
@@ -42,7 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($datos as $m)
+                        @foreach ($mascotas as $m)
                             <tr>
                                 <td>{{ $m->nombre }}</td>
                                 <td>{{ $m->especie }}</td>
@@ -67,35 +58,33 @@
                                 @endif
                                 <td>
                                     <a class="btn btn-success" href="{{ url('/nueva_vacuna/' . $m->id) }}">Nueva
-                                        <i class="fa fa-ambulance" style="font-size:24px"></i>
+                                    <i class="fa fa-ambulance" style="font-size:24px"></i>
                                     </a>
-                                    <a class="btn btn-info mt-2" href="{{ url('/vacuna/' . $m->id) }}">Ver
-                                        <i class="fa fa-medkit" style="font-size:24px"></i>
+                                    <a class="btn btn-info" href="{{ url('/vacuna/' . $m->id) }}">Ver
+                                    <i class="fa fa-medkit" style="font-size:24px"></i>
                                     </a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-success m" href="{{ url('/nueva_desparacitacion/' . $m->id) }}">
-                                        Nueva <i class="fa fa-address-book" style="font-size:24px"></i>
+                                    <a class="btn btn-success" href="{{ url('/nueva_desparacitacion/' . $m->id) }}">
+                                    Nueva <i class="fa fa-address-book" style="font-size:24px"></i>
                                     </a>
-                                    <a class="btn btn-info mt-2" href="{{ url('/desparacitacion/' . $m->id) }}">
-                                        Ver <i class="fa fa-address-book-o" style="font-size:24px"></i>
+                                    <a class="btn btn-info" href="{{ url('/desparacitacion/' . $m->id) }}">
+                                    Ver <i class="fa fa-address-book-o" style="font-size:24px"></i>
                                     </a>
                                 </td>
                                 <td>
                                     <a class="btn btn-success" href="{{ url('/nueva_consulta/' . $m->id) }}">
-                                        Nueva <i class="fa fa-calendar-plus-o" style="font-size:24px"></i>
+                                    Nueva <i class="fa fa-calendar-plus-o" style="font-size:24px"></i>
                                     </a>
-                                    <a class="btn btn-info mt-2 " href="{{ url('/consulta/' . $m->id) }}">
-                                        Ver <i class="fa fa-calendar" style="font-size:24px"></i>
+                                    <a class="btn btn-info" href="{{ url('/consulta/' . $m->id) }}">
+                                    Ver <i class="fa fa-calendar" style="font-size:24px"></i>
                                     </a>
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
-
-                <a class="btn btn-primary" href="{{ url('cliente/') }}"><i class="fa fa-angle-double-left"
-                        style="font-size:24px"></i> Regresar</a>
+                <a class="btn btn-primary" href="{{ url('cliente/') }}"><i class="fa fa-angle-double-left" style="font-size:24px"></i> Regresar</a>
             </div>
         </div>
 

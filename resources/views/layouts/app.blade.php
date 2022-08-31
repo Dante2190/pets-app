@@ -51,6 +51,7 @@
                                     <a class="nav-link {{ request()->is('sucursal.index') ? 'active' : '' }}" href="{{ route('producto.index') }}">{{ __('Productos') }}</a>
                                 </li>
                             @endauth
+
                         </ul>
 
                         <!-- Right Side Of Navbar -->

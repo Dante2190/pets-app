@@ -16,13 +16,14 @@
                 display: none;
             }
         </style>
-        <div class="card">
+        <div class="card border border-dark">
             <div class="card-body">
             <div class="row">
                     <div class="col-md-4">
                 <a class="btn btn-success mb-1" href="{{ url('cliente/create') }}">Nuevo Cliente <i class="fa fa-user-plus" style="font-size:24px"></i></a>
-                <div class="col-md-8"><h1>Clientes</h1></div>
+
             </div>
+            <div class="col-md-8 "><h1>Clientes</h1></div>
         </div>
                 <hr>
                 <form action="{{ route('cliente.index') }}" method="get">
@@ -66,10 +67,10 @@
                                 <td>
                                     <a class="btn btn-success" href="{{ url('/nueva/' . $cliente->id) }}">
                                        Nueva <i class="fa fa-paw" style="font-size:24px"></i>
-                                        
+
                                     </a>
                                     <a class="btn btn-info" href="{{ url('/mascota/' . $cliente->id) }}">
-                                    Ver <i class="fa fa-paw" style="font-size:24px"></i>    
+                                    Ver <i class="fa fa-paw" style="font-size:24px"></i>
                                     </a>
                             </tr>
                         @endforeach
@@ -82,4 +83,7 @@
         </div>
 
     </div>
+    <br>
+
+    @include('includes.notify')
 @endsection

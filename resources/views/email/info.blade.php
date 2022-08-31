@@ -1,9 +1,11 @@
 <p>
-    hi, <br>
-    you have a new contact email from your website. <br> <br>
-    <strong>details:</strong> <br>
+    Hola, un gusto saludarte. <br>
+    Te escribimos de Veterinaria El Corral. <br> <br>
+
+    El motivo de nuestro mensaje es para: <br>
 
 
-    <strong>Message:</strong> {{$data['message']}}
+   {{ $data['message'] }}
 
-    </p>
+
+</p>

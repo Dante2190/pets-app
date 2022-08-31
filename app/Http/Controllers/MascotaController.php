@@ -60,16 +60,19 @@ class MascotaController extends Controller
      * @param  \App\Mascota  $mascota
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request,$id)
+    public function show($id)
     {
+        /*
         $animales = trim($request->get('animales'));
         $datos = DB::table('mascotas')
                 ->select('id','nombre','especie','sexo','raza','color','nacimiento','razgos','foto','id_cliente')
                 ->where('mascotas.id_cliente',$id)
                 ->where('nombre','LIKE', '%'.$animales.'%')
                 ->orWhere('especie','LIKE', '%'.$animales.'%')
-                ->paginate(10);
-        return view('mascota.index',compact('id','datos','animales'));
+                ->paginate(10);*/
+                $datos['mascotas']=Mascota::where('id_cliente','=',$id)->get();
+                return view('mascota.index',$datos,compact('id'));
+        //return view('mascota.index',compact('id','datos','animales'));
     }
 
     /**

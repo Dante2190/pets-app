@@ -19,9 +19,10 @@
             <div class="row">
                     <div class="col-md-4">
                 <a class="btn btn-success mb-1" href="{{ url('empleado/create') }}">Nuevo Empleado <i class="fa fa-user-plus" style="font-size:24px"></i></a>
-                <div class="col-md-8">
-                    <h1>Empleados</h1>
-                </div>
+
+            </div>
+            <div class="col-md-8">
+                <h1>Empleados</h1>
             </div>
         </div>
                 <hr>
@@ -57,7 +58,7 @@
                                     </td>
                                     <td>
                                         <a class="btn btn-warning"
-                                            href="{{ url('/empleado/' . $empleado->id . '/edit') }}">Editar 
+                                            href="{{ url('/empleado/' . $empleado->id . '/edit') }}">Editar
                                             <i class="fa fa-edit" style="font-size:24px"></i>
                                         </a>
                                     </td>
