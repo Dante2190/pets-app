@@ -25,6 +25,7 @@ class UsuarioController extends Controller
     }
     public function store(Request $request)
     {
+        try{
          $campos=[
             'Name'=>'required|string|max:25',
             ];
@@ -37,6 +38,9 @@ class UsuarioController extends Controller
             $datosUsuario=request()->except('_token');
             User::insert($datosUsuario);
             return redirect('home')->with('mensaje','Nuevo Usuario Agregado Exitosamente!');
+        }catch (\Illuminate\Database\QueryException $ex) {
+                return redirect('home')->with('mensaje', 'El usuario no pudo ser registrado, ya que ya existe!');
+            }
 
     }
     public function edit($id)

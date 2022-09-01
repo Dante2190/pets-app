@@ -43,8 +43,8 @@
                     </div>
                     <div class="form-group">
                         <label for="proxima_vacuna">Proxima Vacuna</label>
-                        <input type="date" autocomplete="off" class="form-control" id="proxima_vacuna" name="proxima_vacuna"
-                            required><br>
+                        <input type="date" autocomplete="off" class="form-control" id="proxima_vacuna"
+                            name="proxima_vacuna" required><br>
                     </div>
                     <div class="form-group">
                         <input type="hidden" autocomplete="off" class="form-control" id="id_mascota" name="id_mascota"

@@ -24,6 +24,8 @@ class ClienteController extends Controller
             ->select('id', 'nombre', 'dui', 'direccion', 'contacto', 'whatsapp', 'email')
             ->where('nombre', 'LIKE', '%' . $clientes . '%')
             ->orWhere('direccion', 'LIKE', '%' . $clientes . '%')
+            ->orWhere('contacto', 'LIKE', '%' . $clientes . '%')
+            ->orWhere('dui', 'LIKE', '%' . $clientes . '%')
 
             ->paginate(10);
 
